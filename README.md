@@ -1,20 +1,19 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Javascript scripts (Client-side and Ribbon button) for **Sales Configuration** solution - **Plugin Testing** application.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Use `Dataverse REST Builder` from the `XrmToolBox` to build the Javascript script to call the Custom Action. Use `namespace` is the best practice to run the script.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Development Note
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## 2025-05-01
+
+I want to clone multiple record so I created a loop within the Javascript script to call the plugin multiple time but this hurts the performance. The suggest solution is to use Unbound Custom Action where it will pass in an array (the JS script will be called once) and the loop will be handled by the plugin which improves performance.
+
+Orginally, I pass in just `selectedControlSelectedItemIds` to get the GUID, but later I passed in `selectedControl` to get the control of the homepage grid (because I was using a button) in order to use `selectedControl.refresh()` to refresh the homepage grid once the cloning process has been completed.
+
+Additionally, here are some tools you will also need to download:
+
+- Plugin Registration Tool
+- Early-bound Generator v2
+- FetchXML Tool, I used ChatGPT to generate this.
