@@ -6,6 +6,8 @@ Use `Dataverse REST Builder` from the `XrmToolBox` to build the Javascript scrip
 
 # Development Note
 
+_Ordered from newest to oldest_
+
 ## 2025-05-01
 
 I want to clone multiple record so I created a loop within the Javascript script to call the plugin multiple time but this hurts the performance. The suggest solution is to use Unbound Custom Action where it will pass in an array (the JS script will be called once) and the loop will be handled by the plugin which improves performance.
