@@ -1,6 +1,6 @@
 # Introduction
 
-Javascript scripts (Client-side and Ribbon button) for **Sales Configuration** solution - **Plugin Testing** application.
+Power Platform Javascript scripts (Client-side and Ribbon button) for **Sales Configuration** solution - **Plugin Testing** application.
 
 Use `Dataverse REST Builder` from the `XrmToolBox` to build the Javascript script to call the Custom Action. Use `namespace` is the best practice to run the script.
 
